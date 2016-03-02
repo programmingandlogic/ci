@@ -8,7 +8,8 @@
 
 // npm modules
 const async = require('async'),
-      git   = require('nodegit');
+      git   = require('nodegit'),
+      fs    = require('fs');
 
 // for git status bot.
 const sheildImg = 'https://img.shields.io/badge/build-{{status}}-{{color}}.svg?style=flat-square';
@@ -26,4 +27,5 @@ git.Clone("https://github.com/"+org+"/"+repo, "./tmp")
   // Look up this known commit.
   .then(function(repo) {
     console.log('repository cloned.')
+    console.log('fs:', fs.readdirSync('./tmp'));
   });
