@@ -6,4 +6,12 @@
  * @version 1.0.0
  **/
 
-console.log(process.argv);
+// npm modules
+const async = require('async'),
+      git   = require('nodegit');
+
+// for git status bot.
+const sheildImg = 'https://img.shields.io/badge/build-{{status}}-{{color}}.svg?style=flat-square';
+
+// internals
+const repo = process.argv[2];

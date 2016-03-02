@@ -8,7 +8,7 @@ echo "DEBUG: pulling git..."
 git pull
 
 echo "DEBUG: running node index.js"
-/usr/bin/env node index.js
+/usr/bin/env node index.js $@
 
 popd 1>/dev/null
 
