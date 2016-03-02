@@ -14,4 +14,16 @@ const async = require('async'),
 const sheildImg = 'https://img.shields.io/badge/build-{{status}}-{{color}}.svg?style=flat-square';
 
 // internals
-const repo = process.argv[2];
+const org  = process.argv[2];
+const repo = process.argv[3];
+
+if(org === undefined || repo === undefined) {
+  console.error('Bad opts.');
+  process.exit(1);
+}
+
+git.Clone("https://github.com/"+org+"/"+repo, "./tmp")
+  // Look up this known commit.
+  .then(function(repo) {
+    console.log('repository cloned.')
+  });
