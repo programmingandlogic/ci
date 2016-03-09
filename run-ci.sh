@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo 'ci@1.0.2'
+echo 'ci@1.0.3'
 
 pushd "/root/ci" 1>/dev/null
 

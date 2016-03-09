@@ -11,21 +11,24 @@ const async = require('async'),
       git   = require('nodegit'),
       fs    = require('fs');
 
-// for git status bot.
+// for git status bot (later on?)
 const sheildImg = 'https://img.shields.io/badge/build-{{status}}-{{color}}.svg?style=flat-square';
 
 // internals
-const org  = process.argv[2];
-const repo = process.argv[3];
+const org    = process.argv[2];
+const repo   = process.argv[3];
+const commit = process.argv[4];
 
 if(org === undefined || repo === undefined) {
   console.error('Bad opts.');
   process.exit(1);
 }
 
-git.Clone("https://github.com/"+org+"/"+repo, "./tmp")
-  // Look up this known commit.
+const testSource = "https://github.com/"+org+"/"+repo;
+
+// Clone the repository
+console.log('cloning test source from master branch')
+git.Clone(testSource, "./source")
   .then(function(repo) {
-    console.log('repository cloned.')
-    console.log('fs:', fs.readdirSync('./tmp'));
+    console.log('cloned', testSource);
   });
