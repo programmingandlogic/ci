@@ -1,0 +1,23 @@
+{
+  "name": "karel",
+  "version": "1.0.0",
+  "description": "Simulate Karel The Robot Learns Java in Javascript",
+  "main": "parser.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/programmingandlogic/karel.git"
+  },
+  "keywords": [
+    "karel",
+    "java"
+  ],
+  "author": "Jared Allard <jaredallard@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/programmingandlogic/karel/issues"
+  },
+  "homepage": "https://github.com/programmingandlogic/karel#readme"
+}
